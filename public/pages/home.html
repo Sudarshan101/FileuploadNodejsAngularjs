@@ -1,0 +1,20 @@
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Multipal file Upload Examples</label>
+    <input type="file" class="form-control-file" ype="file" ngf-select="multipalupload($files)"  accept="image/*" multiple>
+  </div>
+</form>
+<div class="container" ng-repeat="imagedata in ImagePath track by $index">
+	<img src="http://localhost:9000/{{imagedata}}" class="rounded mx-auto d-block" alt="...">
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Single file Upload Examples</label>
+    <input type="file" class="form-control-file" ype="file" ngf-select="uploadPhoto($files)"   accept="image/*">
+  </div>
+</form>
+
+<div class="container" ng-if="image">
+	<img src="http://localhost:9000/{{image}}" class="rounded mx-auto d-block" alt="...">
+</div>
